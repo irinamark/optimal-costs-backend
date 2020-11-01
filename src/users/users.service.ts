@@ -39,10 +39,10 @@ export class UsersService {
     return await this.usersRepository.delete(_id)
   }
 
-  async getPassword (_id: string): Promise<User[]> {
+  async getPassword (_name: string): Promise<User[]> {
     return await this.usersRepository.find({
-      select: ['password'],
-      where: [{ id: _id }]
+      // select: ['password'],
+      where: [{ name: _name }]
     })
   }
 }

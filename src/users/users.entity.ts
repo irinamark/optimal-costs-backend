@@ -14,15 +14,6 @@ export class User {
   @Column({ type: 'character varying' })
   password: string;
 
-  @Column({ type: 'character varying' })
-  email: string;
-
-  @Column({ type: 'character' })
-  gender: string;
-
-  @Column({ type: 'integer' })
-  age: number;
-
   @OneToMany(type => Project, project => project.user, { eager: true })
     projects: Project[];
 }
