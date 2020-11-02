@@ -27,7 +27,7 @@ export class ProjectsService {
   async getProject(_id: string): Promise<Project[]> {
     return await this.projectsRepository.find({
       // relations: ['missions', 'missions.tasks'],
-      where: [{ id: _id }]
+      where: [{ userId: _id }]
     })
   }
 
