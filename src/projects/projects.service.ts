@@ -35,6 +35,10 @@ export class ProjectsService {
     return await this.projectsRepository.save(project)
   }
 
+  async updateProject(project) {
+    return await this.projectsRepository.update(project.id, project);
+  }
+
   async deleteProject(_id) {
     return await this.projectsRepository.delete(_id)
   }
