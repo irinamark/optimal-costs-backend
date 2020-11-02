@@ -27,7 +27,7 @@ export class UtilitiesService {
   async getUtility(_id: string): Promise<Utility[]> {
     return await this.utilitiesRepository.find({
       // relations: ['missions', 'missions.tasks'],
-      where: [{ id: _id }]
+      where: [{ projectId: _id }]
     })
   }
 

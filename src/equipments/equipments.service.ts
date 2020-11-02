@@ -27,7 +27,7 @@ export class EquipmentsService {
   async getEquipment(_id: string): Promise<Equipment[]> {
     return await this.equipmentsRepository.find({
       // relations: ['missions', 'missions.tasks'],
-      where: [{ id: _id }]
+      where: [{ projectId: _id }]
     })
   }
 

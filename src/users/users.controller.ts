@@ -13,10 +13,10 @@ export class UsersController {
     return this.userService.findAll()
   }
 
-  // @Get(':name')
-  // getUser (@Param() params) {
-  //   return this.userService.findUser(params.name)
-  // }
+  @Get(':name')
+  getUser (@Param() params) {
+    return this.userService.findUser(params.name)
+  }
 
   // @Get(':id')
   // getUser (@Query() params) {
@@ -33,8 +33,8 @@ export class UsersController {
     return this.userService.deleteUser(params.id)
   }
 
-  @Get(':name')
-  getPassword (@Param() params) {
-    return this.userService.getPassword(params.name)
-  }
+  // @Get(':name')
+  // getPassword (@Param() params) {
+  //   return this.userService.getPassword(params.name)
+  // }
 }

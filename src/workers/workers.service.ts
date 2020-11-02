@@ -27,7 +27,7 @@ export class WorkersService {
   async getWorker(_id: string): Promise<Worker[]> {
     return await this.workersRepository.find({
       // relations: ['missions', 'missions.tasks'],
-      where: [{ id: _id }]
+      where: [{ projectId: _id }]
     })
   }
 

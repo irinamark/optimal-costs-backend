@@ -17,5 +17,5 @@ export class Utility {
 
   @Column({ type: 'character varying' })
   @RelationId((utility: Utility) => utility.project)
-  utilityId: string;
+  projectId: string;
 }

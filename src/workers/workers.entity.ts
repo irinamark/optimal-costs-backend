@@ -17,5 +17,5 @@ export class Worker {
 
   @Column({ type: 'character varying' })
   @RelationId((worker: Worker) => worker.project)
-  workerId: string;
+  projectId: string;
 }

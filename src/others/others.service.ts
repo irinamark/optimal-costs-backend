@@ -28,7 +28,7 @@ export class OthersService {
   async getOther(_id: string): Promise<Other[]> {
     return await this.othersRepository.find({
       // relations: ['missions', 'missions.tasks'],
-      where: [{ id: _id }]
+      where: [{ projectId: _id }]
     })
   }
 
